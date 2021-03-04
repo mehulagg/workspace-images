@@ -45,7 +45,7 @@ RUN install-packages \
         php-tokenizer \
         php-xml \
         php-zip \
-    && mkdir -p /var/run/nginx /var/log/apache2 /var/log/nginx/ \
+    && mkdir -p /var/run/nginx \
     && ln -s /etc/apache2/mods-available/rewrite.load /etc/apache2/mods-enabled/rewrite.load \
     && chown -R gitpod:gitpod /etc/apache2 /var/run/apache2 /var/lock/apache2 /var/log/apache2 \
     && chown -R gitpod:gitpod /etc/nginx /var/run/nginx /var/lib/nginx/ /var/log/nginx/
